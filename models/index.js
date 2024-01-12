@@ -7,6 +7,7 @@ const TourCategory = require("./TourCategory.js");
 const TourMembers = require('./TourMembers.js');
 const Category = require('./Category.js');
 
+
 User.belongsToMany(Tour, {
     through: 'tour_members'
 });
@@ -39,7 +40,13 @@ MemosComment.belongsTo(Memos, {
     foreignKey: 'memo_id'
 });
 
+Tour.hasMany(TourComment, {
+    foreignKey: 'tour_id'
+});
 
+TourComment.belongsTo(Tour, {
+    foreignKey: 'tour_id'
+})
 
 
 
