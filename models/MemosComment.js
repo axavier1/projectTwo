@@ -15,13 +15,9 @@ MemosComment.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
+    created_by: {
+      type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: "users",
-        key: "id",
-      },
     },
     memo_id: {
       type: DataTypes.INTEGER,
@@ -31,6 +27,14 @@ MemosComment.init(
         key: "id",
       },
     },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "users",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,

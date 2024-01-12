@@ -15,12 +15,9 @@ TourComment.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "users",
-        key: "id",
-      },
+    created_by: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     tour_id: {
       type: DataTypes.INTEGER,
