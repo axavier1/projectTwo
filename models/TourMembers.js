@@ -2,10 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
+class ProductTag extends Model { }
 
-class TourCategory extends Model { }
-
-TourCategory.init(
+ProductTag.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -20,10 +19,10 @@ TourCategory.init(
                 key: 'id'
             }
         },
-        category_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'categories',
+                model: 'users',
                 key: 'id'
             }
         }
@@ -33,8 +32,8 @@ TourCategory.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'tour_categories',
+        modelName: 'tour_members',
     }
 );
 
-module.exports = TourCategory;
+module.exports = ProductTag;

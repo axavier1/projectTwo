@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class MemosComment extends Model {}
+class MemosComment extends Model { }
 
 MemosComment.init(
   {
@@ -19,7 +19,7 @@ MemosComment.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "user",
+        model: "users",
         key: "id",
       },
     },
@@ -36,7 +36,7 @@ MemosComment.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "MemosComment",
+    modelName: "memo_comments",
   }
 );
 
