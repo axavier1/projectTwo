@@ -27,7 +27,6 @@ Tour.init(
         key: "id",
       },
     },
-    
   },
   {
     sequelize,
