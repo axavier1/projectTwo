@@ -6,32 +6,42 @@ const tourData = require('./tourData.json');
 const tourCategoryData = require('./tourCategory.json');
 const membersData = require('./tourMembers.json');
 const categoryData = require('./categoryData.json');
+const memoData = require('./memoData.json');
+const memCommentData = require('./memoComment.json');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
     await User.bulkCreate(userData, {
         individualHooks: true,
-        returning: true,
+        returning: true
     });
 
+    await Memos.bulkCreate(memoData, {
+        individualHooks: true,
+        returning: true
+    })
     await Tour.bulkCreate(tourData, {
         individualHooks: true,
-        returning: true,
+        returning: true
     });
     await Category.bulkCreate(categoryData, {
         individualHooks: true,
-        returning: true,
+        returning: true
     });
 
+    await MemosComment.bulkCreate(memCommentData, {
+        individualHooks: true,
+        returning: true
+    });
 
     await TourMembers.bulkCreate(membersData, {
         individualHooks: true,
-        returning: true,
+        returning: true
     });
     await TourCategory.bulkCreate(tourCategoryData, {
         individualHooks: true,
-        returning: true,
+        returning: true
     });
 
     process.exit(0);
