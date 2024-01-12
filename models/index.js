@@ -23,6 +23,14 @@ Tour.belongsToMany(Category, {
     through: 'tour_categories'
 });
 
+User.hasMany(Memos, {
+    foreignKey: 'user_id'
+});
+
+Memos.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
 
 
 
