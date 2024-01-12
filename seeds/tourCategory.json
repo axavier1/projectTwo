@@ -1,0 +1,27 @@
+[
+    {
+      "tour_id": 1,
+      "category_id": 1
+    },
+    {
+        "tour_id": 2,
+        "category_id": 1 
+      },
+      {
+        "tour_id": 3,
+        "category_id": 1
+      },
+      {
+        "tour_id": 1,
+        "category_id": 2 
+      },
+      {
+        "tour_id": 2,
+        "category_id": 2 
+      },
+      {
+        "tour_id": 3,
+        "category_id": 2 
+      }
+  ]
+  

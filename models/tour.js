@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Tour extends Model {}
+class Tour extends Model { }
 
 Tour.init(
   {
@@ -23,23 +23,30 @@ Tour.init(
     host_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "users",
         key: "id",
       },
     },
-    participant_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
+    // participant_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "users",
+    //     key: "id",
+    //   },
+    // },
+    // category_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     module: 'tour_categories',
+    //     key: 'id'
+    //   }
+    // }
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Tour",
+    modelName: "tours",
   }
 );
 
