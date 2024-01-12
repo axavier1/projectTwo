@@ -15,13 +15,7 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // tour_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "tours",
-    //     key: "id",
-    //   },
-    // },
+ 
   },
   {
     sequelize,

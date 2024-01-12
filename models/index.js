@@ -3,16 +3,9 @@ const Tour = require('./tour.js')
 const Memos = require("./Memos");
 const MemosComment = require("./MemosComment");
 const TourComment = require("./TourComment");
-const TourCategory = require("./TourCategory");
+const TourCategory = require("./TourCategory.js");
 const TourMembers = require('./TourMembers.js');
 const Category = require('./Category.js');
-// User.hasMany(Tour, {
-//     foreignKey: 'host_id'
-// });
-// Tour.belongsTo(User, {
-//     foreignKey: 'host_id'
-// });
-
 
 User.belongsToMany(Tour, {
     through: 'tour_members'
@@ -29,18 +22,6 @@ Category.belongsToMany(Tour, {
 Tour.belongsToMany(Category, {
     through: 'tour_categories'
 });
-
-// Tour.hasMany(TourCategory, {
-//     foreignKey: 'tour_id'
-// });
-
-// TourCategory.hasMany(Tour, {
-//     foreignKey: 'tour_id'
-// });
-
-// Memos.hasMany(MemosComment, {
-//     foreignKey: 'memo_id'
-// });
 
 
 

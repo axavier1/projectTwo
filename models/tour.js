@@ -27,20 +27,7 @@ Tour.init(
         key: "id",
       },
     },
-    // participant_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "users",
-    //     key: "id",
-    //   },
-    // },
-    // category_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     module: 'tour_categories',
-    //     key: 'id'
-    //   }
-    // }
+    
   },
   {
     sequelize,
