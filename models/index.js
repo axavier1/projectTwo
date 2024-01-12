@@ -31,6 +31,15 @@ Memos.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+Memos.hasMany(MemosComment, {
+    foreignKey: 'memo_id'
+});
+
+MemosComment.belongsTo(Memos, {
+    foreignKey: 'memo_id'
+});
+
+
 
 
 
