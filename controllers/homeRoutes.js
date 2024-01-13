@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category } = require("../models");
 
 router.get("/", async (req, res) => {
     try {
@@ -17,6 +17,13 @@ router.get('/login', (req, res) => {
         res.status(500).json(err);
     }
 });
+router.get('/signup', (req, res) => {
+    try {
+        res.render("signup");
+    } catch (error) {
+        res.status(500).json(err);
+    }
+})
 
 router.get('/dashboard', async (req, res) => {
     try {
