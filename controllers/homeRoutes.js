@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 //     res.render('dashboard');
 // })
 
-
+// dashboard screen
 router.get('/dashboard/', async (req, res) => {
     try {
         req.session.user_id = 1;
@@ -20,14 +20,14 @@ router.get('/dashboard/', async (req, res) => {
         });
 
         const user = userData.get({ plain: true });
-        console.log(user);
-        console.log(user.tours[0].users);
+        // console.log(user);
+        // console.log(user.tours[0].users);
         const tourData = await Tour.findAll({
             where: { host_id: req.session.user_id },
             include: [{ model: User, attributes: { exclude: ['password'] }, through: { attributes: [] } }],
         });
         const toursArr = tourData.map(tour => tour.get({ plain: true }))
-        console.log(toursArr);
+        // console.log(toursArr);
 
 
         req.session.save(() => {
@@ -44,4 +44,7 @@ router.get('/dashboard/', async (req, res) => {
     }
 })
 
+router.get('/my/profile', async (req, res) => {
+    res.render('myProfile')
+})
 module.exports = router;
