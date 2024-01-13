@@ -18,6 +18,15 @@ router.get('/login', (req, res) => {
     }
 });
 
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  try {
+    res.render("signup");
+  } catch (err) {
+    res.status(500).json(err);
+    }
+});
+
 router.get('/dashboard', async (req, res) => {
     try {
         req.session.user_id = 1;
