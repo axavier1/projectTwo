@@ -32,7 +32,7 @@ router.get("/login", async (req, res) => {
             req.session.user_id = 1;
             req.session.logged_in = true;
 
-            res.render('dashboard', {
+            res.render('login', {
                 user, toursArr,
                 logged_in: req.session.logged_in
             })
@@ -42,4 +42,5 @@ router.get("/login", async (req, res) => {
     }
   });
   
+
 module.exports = router;
