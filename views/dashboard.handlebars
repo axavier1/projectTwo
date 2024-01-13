@@ -8,12 +8,13 @@
 
 <article id="main" class="flex colums-2 flex-row">
   <section class="card flex colums-2 flex-row">
-    <article class="card-s">
+    <article class="card-s ">
         <header class="form-header">Created Tours</header>
-        {{!-- {{#}} --}}
+        {{#each toursArr as |tour|}} {{>tour-small}} {{/each}}
     </article>
     <article class="card-s">
         <header class="form-header">Planned Tours</header>
+        {{#each user.tours as |tour|}} {{>tour-small}} {{/each}}
     </article>
   </section>
   </section>

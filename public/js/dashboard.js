@@ -10,4 +10,10 @@ function toggleSidebar() {
         document.getElementById("main").style.marginLeft = "85px";
         mini = true;
     }
-}
+};
+
+// function openTitle(event) {
+//     // event.preventDefault();
+//     let siblingEl = event.target.previousElementSibling;
+//     console.log(siblingEl);
+// }
