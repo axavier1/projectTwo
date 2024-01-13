@@ -556,6 +556,10 @@ video {
   border-width: 0;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -652,6 +656,10 @@ video {
 
 .w-auto {
   width: auto;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-7xl {
@@ -866,11 +874,11 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-#hidden{
+#hidden {
   visibility: hidden;
 }
 
-#visible{
+#visible {
   visibility: visible;
 }
 
@@ -914,6 +922,7 @@ video {
   transition: margin-left 0.5s;
   padding: 16px;
   margin-left: 85px;
+  background-color: rgb(208, 237, 249);
 }
 
 .icon,
@@ -939,16 +948,17 @@ video {
 /* Syle for card inside dashboard */
 
 .card{
-  border: 2px black solid;
+  /* border: 2px black solid; */
   width: 100%;
-  height: 600px;
-  margin-top: 20px;
+  height: 100%;
+  margin-top: 64px;
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 6px;
 }
 
 .card-s{
+  background-color: white;
   border: 2px black solid;
   width: 100%;
   height: 400px;
@@ -958,9 +968,11 @@ video {
 }
 
 .right-bar {
+  background-color: white;
   height: 100vh;
   width: 250px;
   margin: 20px;
+  margin-top: 64px;
   border: 2px black solid;
   border-radius: 6px;
 }
@@ -973,6 +985,28 @@ video {
   background-color: #abac55;
   font-size: 20px;
   padding: 5px;
+}
+
+/* style for small p element inside deshboard */
+
+.card-s section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.small-title {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  border: rgb(234 88 12) solid 2px;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 10px;
+  /* height: 36px;
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  white-space: nowrap; */
 }
 
 .hover\:bg-gray-700:hover {
