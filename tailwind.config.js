@@ -1,20 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
-  content: ["./views/layouts/*.handlebars","./views/*.handlebars"],
-=======
-  content: ["./views/layouts/*.handlebars", "./node_modules/tw-elements/dist/js/**/*.js"],
->>>>>>> main
+  content: ["./views/layouts/*.handlebars","./views/*.handlebars","./node_modules/tw-elements/dist/js/**/*.js"],
 
   theme: {
     extend: {},
   },
-<<<<<<< HEAD
-  plugins: [require('@tailwindcss/forms'),
+  plugins: [require('@tailwindcss/forms'),("tw-elements/dist/plugin.cjs")
 ],
-=======
-  plugins: [require("tw-elements/dist/plugin.cjs")],
-  darkMode: "class"
->>>>>>> main
 }
 
