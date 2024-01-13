@@ -2466,10 +2466,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-<<<<<<< HEAD
-.p-1 {
-  padding: 0.25rem;
-=======
 .bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
 }
@@ -2511,7 +2507,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .p-0 {
   padding: 0px;
->>>>>>> 9a5072a12fca9e40cffe7b70f71bd0e846a1b932
 }
 
 .p-2 {
