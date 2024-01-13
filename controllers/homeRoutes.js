@@ -1,17 +1,24 @@
-const router = require('express').Router();
-const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category } = require('../models');
+const router = require("express").Router();
+const { User } = require("../models");
 
-router.get('/', async (req, res) => {
-    res.render('homepage');
+router.get("/", async (req, res) => {
+  try {
+    res.render("homepage");
+  } catch (err) {
+    res.status(500).json(err);
+    }
 });
 
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  try {
+    res.render("login");
+  } catch (err) {
+    res.status(500).json(err);
+    }
+});
 
-// router.get('/dashboard', async (req, res) => {
-//     res.render('dashboard');
-// })
-
-
-router.get('/dashboard/', async (req, res) => {
+router.get('/dashboard', async (req, res) => {
     try {
         req.session.user_id = 1;
         const userData = await User.findByPk(req.session.user_id, {
@@ -45,3 +52,7 @@ router.get('/dashboard/', async (req, res) => {
 })
 
 module.exports = router;
+
+
+
+
