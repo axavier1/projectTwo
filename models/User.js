@@ -18,7 +18,7 @@ User.init(
     },
     user_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     age: {
       type: DataTypes.INTEGER,
@@ -55,7 +55,7 @@ User.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "users",
+    modelName: "user",
   }
 );
 

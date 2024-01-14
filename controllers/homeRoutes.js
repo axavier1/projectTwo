@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   try {
     res.render("login");
   } catch (err) {
@@ -19,13 +18,13 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   try {
     res.render("signup");
   } catch (err) {
     res.status(500).json(err);
     }
 });
+
 
 router.get('/dashboard', async (req, res) => {
     try {
