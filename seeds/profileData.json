@@ -1,0 +1,26 @@
+[
+    {
+        "profile_name": "My Name",
+        "age": 30,
+        "fav_place": "Philadelphia",
+        "bio": "Some bio here",
+        "tips": "Some Tips for travel here",
+        "story": "Some story about travel"
+    },
+    {
+        "profile_name": "My Name2",
+        "age": 302,
+        "fav_place": "Philadelphia2",
+        "bio": "Some bio here2",
+        "tips": "Some Tips for travel here2",
+        "story": "Some story about travel2"
+    },
+    {
+        "profile_name": null,
+        "age": null,
+        "fav_place": null,
+        "bio": null,
+        "tips": null,
+        "story": null
+    }
+]

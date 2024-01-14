@@ -1,20 +1,38 @@
 
-<div id="sideBarId" class="sideBar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-  {{!-- <a href="javascript:void(0)" class="closebtn" onclick="togleNav()">&times;</a> --}}
-  <a href="/my/profile"><span><i class="icon fa-solid fa-address-card"></i><span class="icon-text">My Profile</span></a>
-  <a href="#"><i class="icon fa-solid fa-pen-to-square"></i><span class="icon-text"></span>Create Tour</a></span>
-  <a href="/dashboard"><i class="icon fa-solid fa-mountain-sun"></i><span class="icon-text"></span>Your Tours</a></span>
+{{>left-sideBar}}
+<div id="main" class="flex  colums-2 flex-col">
+    <section id="section-1" class="flex  colums-3 flex-row justify-between">
+        <div id="img-holder" class="flex justify-around"><img class="mt-3" src="/assets/icons/traveler.png"></div>
+        <div id="personal-data" class="flex colums-2 flex-col justify-between ">
+                <p>
+                    <label for="personal name">My name:</label>
+                    <input class="personal-input" type="text" id="personale-name" value="{{user.profile.profile_name}}"/>
+                </p>
+                <p>
+                    <label for="age">My Age:</label>
+                    <input class="personal-input" type="text" id="age" value="{{user.profile.age}}"/>
+                </p>
+                <p>
+                    <label for="place">Favorite Place:</label>
+                    <input class="personal-input flex" type="text" id="fav-plc" value="{{user.profile.fav_place}}"/>
+                </p>
+                
+        </div>
+        <div id="bio">
+            <header>Brief BIO</header>
+            <textarea id="bio-txt" name="bio"   rows="10" cols="80" >{{user.profile.bio}}</textarea>
+        </div>
+    </section>
+    <section id="section-2" class="flex colums-2 flex-row justify-between">
+        <div>
+            <header>My Tips for travel</header>
+            <textarea id="tips-text" name="tips" rows="12" cols="100" >{{user.profile.tips}}</textarea>
+        </div>
+        <div>
+            <header>My funny travel story</header>
+            <textarea id="story-text" name="story" rows="12" cols="100" >{{user.profile.story}}</textarea>
+        </div>
+    </section>
+
 </div>
-<div id="main" class="main">
-    <section id="icon" class="row-span-3 w-6">
-        some text
-    </section>
-    <section id="bio" class="row-span-3 w-6">
-        some text
-    </section>
-    <section id="top-places" class="row-span-3 w-6">
-        some text
-    </section>
-</div>
-<script src="https://kit.fontawesome.com/99be4809d8.js" crossorigin="anonymous"></script>
-<script src="/js/dashboard.js"></script>
+
