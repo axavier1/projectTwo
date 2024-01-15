@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile } = require("../models");
+const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile, Icon } = require("../models");
+const isLogged = require('../utils/isLogged');
 
 router.get("/", async (req, res) => {
     try {
@@ -52,7 +53,7 @@ router.get('/dashboard', async (req, res) => {
 })
 
 // connection with profile/update endpoint
-router.get('/profile/update', async (req, res) => {
+router.get('/update/profile', isLogged, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
         include: [{ model: Profile }]
@@ -60,15 +61,25 @@ router.get('/profile/update', async (req, res) => {
 
     const user = userData.get({ plain: true });
     console.log(user);
-    res.render('myProfile', {
+    res.render('updateProfile', {
         user,
         logged_in: req.session.logged_in,
         u_id: req.session.user_id
     });
 })
 
-router.get('/my/profile', async (req, res) => {
-    res.render('myProfile')
+router.get('/profile/:id', async (req, res) => {
+    res.render('profile')
+});
+
+router.get('/update/profile/ico', async (req, res) => {
+    const iconData = await Icon.findAll();
+    const icons = iconData.map(icon => icon.get({ plain: true }));
+    console.log(icons);
+    // res.json(iconData)
+    res.render('icoList', {
+        icons
+    });
 })
 module.exports = router;
 

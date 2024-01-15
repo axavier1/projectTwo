@@ -125,12 +125,9 @@
   border-radius: 10px;
   padding: 8px;
   margin: 10px;
-  /* height: 36px;
-  overflow-x: hidden; 
-  transition: 0.5s; 
-  white-space: nowrap; */
  }
 
+ /* styles for profile page */
  #section-1 {
   background-color: rgb(248, 236, 217);
   margin: 10px;
@@ -156,9 +153,6 @@
  }
  #img-holder {
   width: 15%;
-  /* height: 220px;
-  border: #818181 solid 2px;
-  margin: 15px; */
  }
  #personal-data {
   width: 32%;
@@ -178,6 +172,7 @@
   padding: 10px;
   margin-top: 0;
  }
+
  #section-2 div {
   
   width: 45%;
@@ -199,4 +194,23 @@ textarea {
 label {
   display: block;
   margin-bottom: 10px;
+}
+
+#updateProf-btn {
+  font-size: 24px;
+  padding: 4px;
+  margin: 10px;
+  background-color: #abac55;
+  color: black;
+  border: #818181 2px solid;
+  border-radius: 6px;
+}
+
+#updateProf-btn:hover {
+  color: #f1f1f1;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#updateProf-btn:active {
+  box-shadow: 0px 0px 10px 8px rgba(233, 233, 139, 0.42);
 }

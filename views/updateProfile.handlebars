@@ -2,11 +2,11 @@
 {{>left-sideBar}}
 <div id="main" class="flex  colums-2 flex-col">
     <section id="section-1" class="flex  colums-3 flex-row justify-between">
-        <div id="img-holder" class="flex justify-around"><img class="mt-3" src="/assets/icons/traveler.png"></div>
+        <div id="img-holder" class="flex justify-around"><a href="/update/profile/ico"><img id="img" class="mt-3" src="{{user.profile.img_src}}"></a></div>
         <div id="personal-data" class="flex colums-2 flex-col justify-between ">
                 <p>
                     <label for="personal name">My name:</label>
-                    <input class="personal-input" type="text" id="personale-name" value="{{user.profile.profile_name}}"/>
+                    <input class="personal-input" type="text" id="my-name" value="{{user.profile.profile_name}}"/>
                 </p>
                 <p>
                     <label for="age">My Age:</label>
@@ -33,6 +33,10 @@
             <textarea id="story-text" name="story" rows="12" cols="100" >{{user.profile.story}}</textarea>
         </div>
     </section>
+    <section class="flex justify-center">
+    <butto id="updateProf-btn" class="{{user.profile.id}}">Update</butto>
+    </section>
 
 </div>
 
+<script src="/js/updateProfile.js"></script>

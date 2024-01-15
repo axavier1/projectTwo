@@ -10,38 +10,43 @@ Profile.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true
+        },
+        img_src: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: '/assets/icons/traveler.png'
         },
         profile_name: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: true
         },
         age: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: true
         },
         fav_place: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: true
         },
         bio: {
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: true
         },
         tips: {
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: true
         },
         story: {
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: true
         },
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: "profiles",
+        modelName: "profiles"
     }
 );
 
