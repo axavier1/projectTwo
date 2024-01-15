@@ -19,7 +19,6 @@ Tour.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-
     host_id: {
       type: DataTypes.INTEGER,
       references: {

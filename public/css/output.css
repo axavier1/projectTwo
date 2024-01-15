@@ -1058,10 +1058,6 @@ select {
   order: 3;
 }
 
-.row-span-3 {
-  grid-row: span 3 / span 3;
-}
-
 .float-right {
   float: right;
 }
@@ -1233,12 +1229,12 @@ select {
   margin-top: 0.625rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
+.mt-2\.5 {
+  margin-top: 0.625rem;
 }
 
 .mt-\[0\.15rem\] {
@@ -1489,10 +1485,6 @@ select {
   min-height: 100%;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .\!w-px {
   width: 1px !important;
 }
@@ -1699,6 +1691,10 @@ select {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .max-w-sm {
@@ -2309,6 +2305,11 @@ select {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-indigo-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+}
+
 .border-neutral-100 {
   --tw-border-opacity: 1;
   border-color: rgb(245 245 245 / var(--tw-border-opacity));
@@ -2532,6 +2533,10 @@ select {
   padding: 0px;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .p-12 {
   padding: 3rem;
 }
@@ -2550,6 +2555,10 @@ select {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-\[1rem\] {
@@ -2803,6 +2812,11 @@ select {
   vertical-align: -0.125em;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2979,6 +2993,10 @@ select {
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
 }
 
 .\!text-\[\#14a44d\] {
@@ -3464,6 +3482,11 @@ select {
   transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
 }
 
+.main-logo {
+  height: 400;
+  width: 592px;
+}
+
 #hidden {
   visibility: hidden;
 }
@@ -3512,7 +3535,7 @@ select {
   transition: margin-left 0.5s;
   padding: 16px;
   margin-left: 85px;
-  background-color: rgb(208, 237, 249);
+  /* background-color: rgb(208, 237, 249); */
 }
 
 .icon,
@@ -3593,15 +3616,110 @@ select {
   border-radius: 10px;
   padding: 8px;
   margin: 10px;
-  /* height: 36px;
-  overflow-x: hidden; 
-  transition: 0.5s; 
-  white-space: nowrap; */
 }
 
-.main-logo {
-  height: 400;
-  width: 592px;
+/* styles for profile page */
+
+#section-1 {
+  background-color: rgb(248, 236, 217);
+  margin: 10px;
+  height: 100%;
+  margin-top: 70px;
+  padding: 10px;
+  border: black solid 1px;
+  border-top-right-radius:  4px;
+  border-top-left-radius: 4px;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+section div {
+  height: 100%;
+  margin: 15px;
+}
+
+#section-1 div p {
+  width: 100%;
+  height: 48%;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+#img-holder {
+  width: 15%;
+}
+
+#personal-data {
+  width: 32%;
+}
+
+#bio {
+  width: 41%
+}
+
+#section-2{
+  background-color: rgb(248, 236, 217);
+  border: black solid 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
+  margin: 10px;
+  padding: 10px;
+  margin-top: 0;
+}
+
+#section-2 div {
+  width: 45%;
+  min-height: 450px;
+  height: 100%;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#updateProf-btn {
+  font-size: 24px;
+  padding: 4px;
+  margin: 10px;
+  background-color: #abac55;
+  color: black;
+  border: #818181 2px solid;
+  border-radius: 6px;
+}
+
+#updateProf-btn:hover {
+  color: #f1f1f1;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#updateProf-btn:active {
+  box-shadow: 0px 0px 10px 8px rgba(233, 233, 139, 0.42);
+}
+
+/* style for icon list */
+
+.img-list {
+  margin-top: 20px;
+  padding: 10px;
+  height: 300px;
+  width: 250px;
+  /* border-radius: 5px; */
+}
+
+.img-list:hover{
+  cursor: pointer;
 }
 
 .selection\:bg-transparent *::-moz-selection {
@@ -4806,8 +4924,16 @@ select {
     display: block;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
   }
 
   .sm\:w-full {
@@ -4833,6 +4959,11 @@ select {
 
   .sm\:pr-0 {
     padding-right: 0px;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .sm\:text-sm {
@@ -5399,5 +5530,3 @@ select {
     fill: #fff;
   }
 }
-
- 

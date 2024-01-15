@@ -1,12 +1,21 @@
 const User = require("./User");
-const Tour = require('./tour.js')
+const Tour = require('./Tour.js')
 const Memos = require("./Memos");
 const MemosComment = require("./MemosComment");
 const TourComment = require("./TourComment.js");
 const TourCategory = require("./TourCategory.js");
 const TourMembers = require('./TourMembers.js');
 const Category = require('./Category.js');
+const Profile = require('./Profile.js');
+const Icon = require('./Icon.js');
 
+Profile.hasOne(User, {
+    foreignKey: 'profile_id'
+});
+
+User.belongsTo(Profile, {
+    foreignKey: 'profile_id'
+});
 
 User.belongsToMany(Tour, {
     through: 'tour_members'
@@ -50,4 +59,4 @@ TourComment.belongsTo(Tour, {
 
 
 
-module.exports = { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category };
+module.exports = { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile, Icon };

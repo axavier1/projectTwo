@@ -20,10 +20,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
+    // age: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
 
     email: {
       type: DataTypes.STRING,
@@ -40,6 +40,13 @@ User.init(
         len: [8],
       },
     },
+    profile_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "profiles",
+        key: "id",
+      },
+    }
   },
   {
     hooks: {
