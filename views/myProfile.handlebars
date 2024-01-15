@@ -1,9 +1,10 @@
-
 <div id="sideBarId" class="sideBar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-  {{!-- <a href="javascript:void(0)" class="closebtn" onclick="togleNav()">&times;</a> --}}
-  <a href="/my/profile"><span><i class="icon fa-solid fa-address-card"></i><span class="icon-text">My Profile</span></a>
-  <a href="#"><i class="icon fa-solid fa-pen-to-square"></i><span class="icon-text"></span>Create Tour</a></span>
-  <a href="/dashboard"><i class="icon fa-solid fa-mountain-sun"></i><span class="icon-text"></span>Your Tours</a></span>
+    {{!-- <a href="javascript:void(0)" class="closebtn" onclick="togleNav()">&times;</a> --}}
+    <a href="/my/profile"><span><i class="icon fa-solid fa-address-card"></i><span class="icon-text">My
+                Profile</span></a>
+    <a href="#"><i class="icon fa-solid fa-pen-to-square"></i><span class="icon-text"></span>Create Tour</a></span>
+    <a href="/dashboard"><i class="icon fa-solid fa-mountain-sun"></i><span class="icon-text"></span>Your
+        Tours</a></span>
 </div>
 <div id="main" class="main">
     <section id="icon" class="row-span-3 w-6">
@@ -15,6 +16,11 @@
     <section id="top-places" class="row-span-3 w-6">
         some text
     </section>
+    <form id="imageForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" accept="image/*">
+        <button type="button" onclick="uploadImage()">Upload Image</button>
+    </form>
+
 </div>
 <script src="https://kit.fontawesome.com/99be4809d8.js" crossorigin="anonymous"></script>
 <script src="/js/dashboard.js"></script>

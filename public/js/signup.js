@@ -1,6 +1,6 @@
 const signupFormHandler = async (event) => {
     event.preventDefault();
-    console.log('working')
+    console.log('working');
     document.location.replace("/signup");
   
     const user_name = document.querySelector("#name").value.trim();
@@ -17,7 +17,7 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        console.log('new account')
+        console.log('new account');
         document.location.replace("/dashboard");
 
       } else {
