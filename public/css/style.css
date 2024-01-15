@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 
 #hidden {
@@ -130,3 +130,10 @@
   transition: 0.5s; 
   white-space: nowrap; */
  }
+
+ .main-logo {
+  height: 400;
+  width: 592px;
+ }
+
+ 
