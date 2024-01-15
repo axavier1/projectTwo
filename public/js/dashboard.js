@@ -12,8 +12,3 @@ function toggleSidebar() {
     }
 };
 
-// function openTitle(event) {
-//     // event.preventDefault();
-//     let siblingEl = event.target.previousElementSibling;
-//     console.log(siblingEl);
-// }
