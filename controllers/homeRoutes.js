@@ -61,6 +61,15 @@ router.get('/dashboard', async (req, res) => {
 router.get('/my/profile', async (req, res) => {
     res.render('myProfile')
 })
+
+router.get("/info", async (req, res) => {
+    try {
+        res.render("infopage");
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
 
 
