@@ -1058,6 +1058,10 @@ select {
   order: 3;
 }
 
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
 .float-right {
   float: right;
 }
@@ -1215,6 +1219,10 @@ select {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -2486,8 +2494,16 @@ select {
   --tw-gradient-to: #2563eb var(--tw-gradient-to-position);
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-clip-padding {
   background-clip: padding-box;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .fill-\[\#afafaf\] {
@@ -2514,6 +2530,10 @@ select {
 
 .p-0 {
   padding: 0px;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .p-2 {
@@ -3579,6 +3599,11 @@ select {
   white-space: nowrap; */
 }
 
+.main-logo {
+  height: 400;
+  width: 592px;
+}
+
 .selection\:bg-transparent *::-moz-selection {
   background-color: transparent;
 }
@@ -3847,6 +3872,11 @@ select {
   color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
+.hover\:text-neutral-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3939,6 +3969,11 @@ select {
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.focus\:text-neutral-700:focus {
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
 .focus\:text-white:focus {
@@ -4828,6 +4863,14 @@ select {
     flex-direction: row;
   }
 
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:pr-1 {
     padding-right: 0.25rem;
   }
@@ -5356,3 +5399,5 @@ select {
     fill: #fff;
   }
 }
+
+ 
