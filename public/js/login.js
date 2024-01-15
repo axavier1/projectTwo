@@ -7,39 +7,18 @@ const loginFormHandler = async (event) => {
 
   if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/homeRoutes/login", {
+    const response = await fetch("/api/user/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace("/profile");
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-
-const signupFormHandler = async (event) => {
-  event.preventDefault();
-
-  document.location.replace("/signup");
-
-  const name = document.querySelector("#name").value.trim();
-  const email = document.querySelector("#email").value.trim();
-  const password = document.querySelector("#password").value.trim();
-
-  if (name && email && password) {
-    const response = await fetch("/api/homeRoutes/login", {
-      method: "POST",
-      body: JSON.stringify({ name, email, password })
-      
-    });
-
-    if (response.ok) {
-      document.location.replace("/signup");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
@@ -48,8 +27,4 @@ const signupFormHandler = async (event) => {
 
 document
   .querySelector(".login-btn")
-  .addEventListener("submit", loginFormHandler);
-
-document
-  .querySelector(".signup-btn")
-  .addEventListener("submit", signupFormHandler);
+  .addEventListener("click", loginFormHandler);
