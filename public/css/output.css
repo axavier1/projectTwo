@@ -1058,10 +1058,6 @@ select {
   order: 3;
 }
 
-.row-span-3 {
-  grid-row: span 3 / span 3;
-}
-
 .float-right {
   float: right;
 }
@@ -1235,10 +1231,6 @@ select {
 
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -1491,10 +1483,6 @@ select {
 
 .min-h-full {
   min-height: 100%;
-}
-
-.min-h-screen {
-  min-height: 100vh;
 }
 
 .\!w-px {
@@ -3521,7 +3509,7 @@ select {
   transition: margin-left 0.5s;
   padding: 16px;
   margin-left: 85px;
-  background-color: rgb(208, 237, 249);
+  /* background-color: rgb(208, 237, 249); */
 }
 
 .icon,
@@ -3602,15 +3590,110 @@ select {
   border-radius: 10px;
   padding: 8px;
   margin: 10px;
-  /* height: 36px;
-  overflow-x: hidden; 
-  transition: 0.5s; 
-  white-space: nowrap; */
 }
 
-.main-logo {
-  height: 400;
-  width: 592px;
+/* styles for profile page */
+
+#section-1 {
+  background-color: rgb(248, 236, 217);
+  margin: 10px;
+  height: 100%;
+  margin-top: 70px;
+  padding: 10px;
+  border: black solid 1px;
+  border-top-right-radius:  4px;
+  border-top-left-radius: 4px;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+section div {
+  height: 100%;
+  margin: 15px;
+}
+
+#section-1 div p {
+  width: 100%;
+  height: 48%;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+#img-holder {
+  width: 15%;
+}
+
+#personal-data {
+  width: 32%;
+}
+
+#bio {
+  width: 41%
+}
+
+#section-2{
+  background-color: rgb(248, 236, 217);
+  border: black solid 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
+  margin: 10px;
+  padding: 10px;
+  margin-top: 0;
+}
+
+#section-2 div {
+  width: 45%;
+  min-height: 450px;
+  height: 100%;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#updateProf-btn {
+  font-size: 24px;
+  padding: 4px;
+  margin: 10px;
+  background-color: #abac55;
+  color: black;
+  border: #818181 2px solid;
+  border-radius: 6px;
+}
+
+#updateProf-btn:hover {
+  color: #f1f1f1;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#updateProf-btn:active {
+  box-shadow: 0px 0px 10px 8px rgba(233, 233, 139, 0.42);
+}
+
+/* style for icon list */
+
+.img-list {
+  margin-top: 20px;
+  padding: 10px;
+  height: 300px;
+  width: 250px;
+  /* border-radius: 5px; */
+}
+
+.img-list:hover{
+  cursor: pointer;
 }
 
 .selection\:bg-transparent *::-moz-selection {
@@ -5408,5 +5491,3 @@ select {
     fill: #fff;
   }
 }
-
- 
