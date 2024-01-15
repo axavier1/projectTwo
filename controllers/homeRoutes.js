@@ -42,6 +42,7 @@ router.get('/dashboard', async (req, res) => {
         req.session.save(() => {
             req.session.user_id = 1;
             req.session.logged_in = true;
+            req.session.profile_id = user.profile_id
             res.render('dashboard', {
                 user, toursArr,
                 logged_in: req.session.logged_in
@@ -76,9 +77,11 @@ router.get('/update/profile/ico', async (req, res) => {
     const iconData = await Icon.findAll();
     const icons = iconData.map(icon => icon.get({ plain: true }));
     console.log(icons);
+    const profileID = req.session.profile_id
+    console.log(profileID);
     // res.json(iconData)
     res.render('icoList', {
-        icons
+        icons, profileID
     });
 })
 module.exports = router;
