@@ -6,6 +6,7 @@ const tourData = require('./tourData.json');
 const tourCategoryData = require('./tourCategory.json');
 const membersData = require('./tourMembers.json');
 const categoryData = require('./categoryData.json');
+const tourCommentData = require('./tourCommentData.json')
 const memoData = require('./memoData.json');
 const memCommentData = require('./memoComment.json');
 const profileData = require('./profileData.json');
@@ -53,6 +54,10 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true
     });
+    await TourComment.bulkCreate(tourCommentData, {
+        individualHooks: true,
+        returning: true
+    })
 
     process.exit(0);
 };
