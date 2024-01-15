@@ -86,6 +86,15 @@ router.get('/update/profile/ico', async (req, res) => {
         icons, profileID
     });
 })
+
+router.get("/info", async (req, res) => {
+    try {
+        res.render("infopage");
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
 
 
