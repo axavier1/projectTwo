@@ -44,6 +44,29 @@ router.post('/signup', async (req, res) => {
   } catch (error) {
     res.status(400).json(error);
   }
+});
+router.post('/memos', async (req, res) => {
+  try {
+    const createMemo = await Memos.create();
+    console.log(createMemo);
+    const MemosId = createMemo.id
+    const selectUser = await User.findOne({ where: { email: req.body.email }, include: [{ model: Profile }] ,
+      title: req.body.title,
+      description: req.body.description,
+      user_id: MemosId
+    });
+    req.session.save(() => {
+      req.session.user_id = MemosId;
+      req.session.title = selectUser.title;
+      req.session.Memos_id = MemosId;
+      req.session.logged_in = true;
+      res.json(selectUser);
+    });
+
+
+  } catch (error) {
+    res.status(400).json(error);
+  }
 })
 
 // POST method  for http://localhost:3001/api/users/login (checking user if he is in db and creating seesion info)
