@@ -136,6 +136,7 @@ router.get("/info", async (req, res) => {
     try {
         res.render("infopage", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src
         });
     } catch (err) {
@@ -148,13 +149,14 @@ router.get("/contactUs", async (req, res) => {
     try {
         res.render("contactUs", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src,
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
-router.get("/tours", isLogged, async (req, res) => {
+router.get("/tours", async (req, res) => {
     try {
         const tourData = await Tour.findAll({
             include: [
@@ -169,33 +171,63 @@ router.get("/tours", isLogged, async (req, res) => {
         res.render("tours", {
             tours,
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src,
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
-router.get("/memos", isLogged, async (req, res) => {
+router.get("/memos", async (req, res) => {
     try {
-        const memosData = await Memos.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: { exclude: ["password"] },
-                    through: { attributes: [] },
-                },
-            ],
-        });
-        const memos = memosData.map((memos) => memos.get({ plain: true }));
+        const memosData = await Memos.findAll(
+            {
+                include: [
+                    {
+                        model: User,
+                        attributes: { exclude: ["password"] }
+                    }
+                ]
+            }
+        );
+        const memos = memosData.map((memo) => memo.get({ plain: true }));
+        // console.log(memos);
         res.render("memos", {
             memos,
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src,
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
+
+router.get("/tours/:id", async (req, res) => {
+    try {
+        const tourData = await Tour.findByPk(req.params.id,
+            {
+                include: [{ model: User, attributes: { exclude: ["password"] }, through: { attributes: [] } }]
+            }
+        );
+        const userData = await User.findByPk(tourData.host_id, {
+            attributes: { exclude: ["password"] },
+            include: [{ model: Profile }],
+        });
+        const user = userData.get({ plain: true });
+        console.log(user);
+        const tour = tourData.get({ plain: true });
+        res.render('tourInfo', {
+            tour,
+            user,
+            logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
+            img_src: req.session.img_src,
+        })
+    } catch (error) {
+        res.status(500).json(error);
+    }
+})
 router.get("/:error", async (req, res) => {
     try {
         res.render("errorpage", {});

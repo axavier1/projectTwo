@@ -2,18 +2,21 @@
     {
       "title": "Cool Tour 1",
       "description": "We will travel around the world",
+      "text": "some explanation",
       "host_id": 1,
       "category_id": 1
     },
     {
         "title": "Cool Tour 3",
         "description": "We will travel around the world",
+        "text": "some explanation",
         "host_id": 2,
         "category_id": 2
       },
       {
         "title": "Cool Tour 2",
         "description": "We will travel around the world",
+        "text": "some explanation",
         "host_id": 3,
         "category_id": 3
       }
