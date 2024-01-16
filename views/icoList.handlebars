@@ -1,7 +1,7 @@
 {{>left-sideBar}}
 
 <main id="main" class="flex coluns-2 flex-col">
-    <p id="{{profileID}}" class="id">Choose your icon </p>
+    <p id="{{profile_id}}" class="id">Choose your icon </p>
     <div id="list" class="flex  justify-around flex-wrap">
     {{#each icons as |icon|}}
     <img id="{{icon.id}}" class="img-list" src="/assets/icons/{{icon.name}}">

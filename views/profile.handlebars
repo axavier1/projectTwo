@@ -1,0 +1,39 @@
+
+{{#if logged_in}}{{>left-sideBar}} {{/if}}
+<div id="main" class="flex  colums-2 flex-col">
+    <section id="section-1" class="flex  colums-3 flex-row justify-between">
+        <div id="img-holder" class="flex justify-around"><img id="img" class="mt-3" src="{{profile.img_src}}"></div>
+        <div id="personal-data" class="flex colums-2 flex-col justify-between ">
+                <p>
+                    My name: {{profile.profile_name}}
+                </p>
+                <p>
+                    My Age: {{profile.age}}
+                </p>
+                <p>
+                    Favorite Place:{{profile.fav_place}}
+                </p>
+                
+        </div>
+        <div id="bio">
+            <header>Brief BIO</header>
+            <p id="bio-txt">{{profile.bio}}</p>
+        </div>
+    </section>
+    <section id="section-2" class="flex colums-2 flex-row justify-between">
+        <div>
+            <header>My Tips for travel</header>
+            <p id="tips-text">{{profile.tips}}</p>
+        </div>
+        <div>
+            <header>My funny travel story</header>
+            <p id="story-text" >{{profile.story}}</p>
+        </div>
+    </section>
+    {{!-- <section class="flex justify-center"> --}}
+    {{!-- <butto id="updateProf-btn" class="{{user.profile.id}}">Update</butto> --}}
+    {{!-- </section> --}}
+
+</div>
+
+{{!-- <script src="/js/Profile.js"></script> --}}
