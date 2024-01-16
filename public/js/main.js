@@ -1,13 +1,37 @@
 
-const hideShow = (event) => {
-    event.preventDefault();
-    if (document.querySelector('#hidden')) {
-        const hidEL = document.querySelector('#hidden')
+// function to delete session id and log out user
+const logout = async () => {
 
-        hidEL.setAttribute('id', 'visible');
+    const res = await fetch('/api/users/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    });
+    if (res.ok) {
+        document.location.replace('/');
     } else {
-        document.querySelector('#visible').setAttribute('id', 'hidden');
+        alert(res.statusText);
     }
+};
+
+if (document.querySelector('#logout')) {
+    document.querySelector('#logout').addEventListener('click', logout);
 }
 
-document.querySelector('#user-menu-button').addEventListener('click', hideShow);
+// function to show hide list of button on small screen
+
+const btnList = async (event) => {
+    event.preventDefault();
+    if (!document.querySelector('#nav-list').style.display || document.querySelector('#nav-list').style.display == 'none') {
+        document.querySelector('#nav-list').style.display = 'block';
+        document.getElementById("sideBarId").style.top = "256px";
+    } else {
+        document.querySelector('#nav-list').style.display = 'none';
+        document.getElementById("sideBarId").style.top = "64px";
+    }
+
+    console.log(document.querySelector('#nav-list').style.display)
+}
+
+if (document.querySelector('#nav-btn')) {
+    document.querySelector('#nav-btn').addEventListener('click', btnList)
+}

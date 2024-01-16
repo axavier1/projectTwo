@@ -10,7 +10,7 @@ const updateProfile = async (event) => {
     const tips = document.querySelector('#tips-text').value.trim();
     const story = document.querySelector('#story-text').value.trim();
     const profileObj = { img_src, profile_name, age, fav_place, bio, tips, story }
-    console.log(profileObj);
+    // console.log(profileObj);
     const id = document.querySelector('#updateProf-btn').getAttribute('class');
     const res = await fetch(`/api/profiles/${id}`, {
         method: 'PUT',
