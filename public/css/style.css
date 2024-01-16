@@ -8,13 +8,19 @@
   width: 592px;
  }
 
-#hidden {
+ #nav-list{
+  display: none;
+  transition: 0.5s;
+ }
+/* #hidden {
     visibility: hidden;
 }
 
 #visible {
     visibility: visible;
-}
+} */
+
+
 
 /* Style for right sidebar at dashboard Screen */
 .sideBar {
@@ -68,6 +74,13 @@
     margin-right: 30px;
 }
 
+@media screen and (max-width: 640px) {
+  .sideBar { 
+    /* top: 256px;  */
+    top: 64px; 
+  }
+
+}
   @media screen and (max-height: 450px) {
     .sideBar {padding-top: 15px;}
     .sideBar a {font-size: 18px;}
