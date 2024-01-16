@@ -1,6 +1,8 @@
 <div id="sideBarId" class="sideBar" onclick="toggleSidebar()" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
   {{!-- <a href="javascript:void(0)" class="closebtn" onclick="togleNav()">&times;</a> --}}
-  <a href="/profile/{{u_id}}"><span><i class="icon fa-solid fa-address-card"></i><span class="icon-text">My Profile</span></a>
+  {{#if profile_id}} 
+  <a href="/profile/{{profile_id}}"><span><i class="icon fa-solid fa-address-card"></i><span class="icon-text">My Profile</span></a>
+  {{/if}}
   <a href="/update/profile/"><i class="icon fa-solid fa-id-card-clip"></i><span class="icon-text"></span>Update Profile</a></span>
   <a href="#"><i class="icon fa-solid fa-pen-to-square"></i><span class="icon-text"></span>Create Tour</a></span>
   <a href="/dashboard"><i class="icon fa-solid fa-mountain-sun"></i><span class="icon-text"></span>Your Tours</a></span>
