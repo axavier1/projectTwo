@@ -29,7 +29,7 @@
     top: 64px; 
     width: 85px;
     left: 0;
-    background-color: #abac55; 
+    /* background-color: #abac55;  */
     overflow-x: hidden; 
     padding-top: 60px; 
     transition: 0.5s; 
@@ -50,13 +50,7 @@
     color: #f1f1f1;
 }
   
-.sideBar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+
   
 #main {
     transition: margin-left 0.5s;
@@ -79,6 +73,9 @@
     /* top: 256px;  */
     top: 64px; 
   }
+  .right-bar{
+    display: none;
+  }
 
 }
   @media screen and (max-height: 450px) {
@@ -87,6 +84,7 @@
   }
 
   /* Syle for card inside dashboard */
+
 
   .card{
     /* border: 2px black solid; */
@@ -98,16 +96,30 @@
     border-radius: 6px;
   }
 
-  .card-s{
+  .tour-card{
     background-color: white;
-    border: 2px black solid;
-    width: 100%;
-    height: 400px;
-    margin-right: 8px;
-    margin-left: 8px;
+    border: 1px black solid;
+    min-width: 150px;
+    min-height: 150px;
+    height: 100%;
+    max-width: 300px;
+    margin: 10px;
     border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
   }
-
+  .tour-card p {
+    margin: 6px;
+    margin-bottom: 40px;
+  }
+  .tour-card a {
+    border:gray 2px solid;
+    color:white;
+    background-color: #abac55;
+    font-size: 20px;
+    border-radius: 9px;
+    padding: 6px;
+  }
   .right-bar {
     background-color: white;
     height: 100vh;
@@ -123,9 +135,10 @@
     justify-content: space-around;
     width: 100%;
     color:azure;
-    background-color: #abac55;
+    /* background-color: #abac55; */
     font-size: 20px;
     padding: 5px;
+    border-radius: 3px;
   }
 
  /* style for small p element inside deshboard */
