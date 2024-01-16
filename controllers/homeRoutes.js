@@ -143,7 +143,64 @@ router.get("/info", async (req, res) => {
     }
 });
 
-router.get('/:error', async (req, res) => {
-    res.render('error')
-})
+
+router.get("/contactUs", async (req, res) => {
+    try {
+        res.render("contactUs", {
+            logged_in: req.session.logged_in,
+            img_src: req.session.img_src,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+router.get("/tours", isLogged, async (req, res) => {
+    try {
+        const tourData = await Tour.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: { exclude: ["password"] },
+                    through: { attributes: [] },
+                },
+            ],
+        });
+        const tours = tourData.map((tour) => tour.get({ plain: true }));
+        res.render("tours", {
+            tours,
+            logged_in: req.session.logged_in,
+            img_src: req.session.img_src,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+router.get("/memos", isLogged, async (req, res) => {
+    try {
+        const memosData = await Memos.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: { exclude: ["password"] },
+                    through: { attributes: [] },
+                },
+            ],
+        });
+        const memos = memosData.map((memos) => memos.get({ plain: true }));
+        res.render("memos", {
+            memos,
+            logged_in: req.session.logged_in,
+            img_src: req.session.img_src,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+router.get("/:error", async (req, res) => {
+    try {
+        res.render("errorpage", {});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 module.exports = router;
