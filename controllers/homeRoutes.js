@@ -207,7 +207,7 @@ router.get("/tours/:id", async (req, res) => {
     try {
         const tourData = await Tour.findByPk(req.params.id,
             {
-                include: [{ model: User, attributes: { exclude: ["password"] }, through: { attributes: [] } }]
+                include: [{ model: User, attributes: { exclude: ["password"] }, through: { attributes: [] } }, { model: Category, through: { attributes: [] } }]
             }
         );
         const userData = await User.findByPk(tourData.host_id, {
@@ -215,8 +215,9 @@ router.get("/tours/:id", async (req, res) => {
             include: [{ model: Profile }],
         });
         const user = userData.get({ plain: true });
-        console.log(user);
         const tour = tourData.get({ plain: true });
+        console.log(user);
+        console.log(tour);
         res.render('tourInfo', {
             tour,
             user,
