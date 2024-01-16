@@ -1,32 +1,32 @@
 
 {{#if logged_in}}{{>left-sideBar}} {{/if}}
-<div id="main" class="flex  colums-2 flex-col">
-    <section id="section-1" class="flex  colums-3 flex-row justify-between">
+<div id="main" class="flex  colums-2 flex-col text-lg">
+    <section id="section-1" class="flex  colums-3 flex-row justify-between flex-wrap">
         <div id="img-holder" class="flex justify-around"><img id="img" class="mt-3" src="{{profile.img_src}}"></div>
-        <div id="personal-data" class="flex colums-2 flex-col justify-between ">
+        <div id="personal-data" class="flex colums-2 flex-col justify-between flex-wrap">
                 <p>
-                    My name: {{profile.profile_name}}
+                <strong> My name:</strong> {{profile.profile_name}}
                 </p>
                 <p>
-                    My Age: {{profile.age}}
+                   <strong>My Age:</strong>  {{profile.age}}
                 </p>
                 <p>
-                    Favorite Place:{{profile.fav_place}}
+                   <strong>Favorite Place: </strong>  {{profile.fav_place}}
                 </p>
                 
         </div>
         <div id="bio">
-            <header>Brief BIO</header>
+            <header><strong>Brief BIO:</strong></header>
             <p id="bio-txt">{{profile.bio}}</p>
         </div>
     </section>
-    <section id="section-2" class="flex colums-2 flex-row justify-between">
+    <section id="section-2" class="flex colums-2 flex-row justify-between flex-wrap">
         <div>
-            <header>My Tips for travel</header>
+            <header><strong>My Tips for travel:</strong></strong></header>
             <p id="tips-text">{{profile.tips}}</p>
         </div>
         <div>
-            <header>My funny travel story</header>
+            <header><strong>My funny travel story:</strong></header>
             <p id="story-text" >{{profile.story}}</p>
         </div>
     </section>

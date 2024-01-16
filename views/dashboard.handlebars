@@ -1,18 +1,18 @@
 {{>left-sideBar}}
 
-<article id="main" class="flex colums-2 flex-row">
-  <section class="card flex colums-2 flex-row">
-    <article class="card-s ">
-        <header class="form-header">Created Tours</header>
+<article id="main" class="flex colums-2 flex-row bg-red-50 ">
+  <section class="card flex colums-2 flex-col ">
+    <article class=" flex flex-row flex-wrap ">
+        <header class="form-header bg-green-600 ">Created Tours</header>
         {{#each toursArr as |tour|}} {{>tour-small}} {{/each}}
     </article>
-    <article class="card-s">
-        <header class="form-header">Planned Tours</header>
+    <article class=" mt-3 flex flex-row flex-wrap">
+        <header class="form-header bg-green-600 ">Planned Tours</header>
         {{#each user.tours as |tour|}} {{>tour-small}} {{/each}}
     </article>
   </section>
   </section>
-  <section class="right-bar"> <header class="form-header">Friends</header></section>
+  <section class="right-bar "> <header class="form-header bg-green-600">Friends</header></section>
 </article>
 <script src="https://kit.fontawesome.com/99be4809d8.js" crossorigin="anonymous"></script>
 
