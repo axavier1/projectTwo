@@ -1174,6 +1174,11 @@ select {
   margin-bottom: 5px;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .-ml-\[1\.5rem\] {
   margin-left: -1.5rem;
 }
@@ -2747,6 +2752,11 @@ select {
 .bg-amber-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 230 138 / var(--tw-bg-opacity));
+}
+
+.bg-lime-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 252 203 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
