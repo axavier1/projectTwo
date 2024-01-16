@@ -182,7 +182,6 @@ router.get("/memos", isLogged, async (req, res) => {
                 {
                     model: User,
                     attributes: { exclude: ["password"] },
-                    through: { attributes: [] },
                 },
             ],
         });
