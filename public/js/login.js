@@ -7,7 +7,7 @@ const loginFormHandler = async (event) => {
 
   if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/user/login", {
+    const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({
         email: email,
@@ -26,5 +26,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".login-btn")
+  .querySelector("#login-btn")
   .addEventListener("click", loginFormHandler);

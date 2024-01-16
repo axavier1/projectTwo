@@ -16,8 +16,11 @@ router.put('/:id', isLogged, async (req, res) => {
             });
             return;
         }
-
-        res.json(updateProfile);
+        req.session.save(() => {
+            req.session.img_src = req.body.img_src;
+            console.log()
+            res.json(updateProfile);
+        })
     } catch (error) {
         res.status(500).json(error);
     }
