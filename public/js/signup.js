@@ -9,6 +9,7 @@ const signupFormHandler = async (event) => {
   const confPassword = document.querySelector("#confPassword").value.trim();
   if (password != confPassword) {
     alert(`password not match`)
+    return;
   }
   if (user_name && email && password) {
     const response = await fetch("/api/users/signup", {

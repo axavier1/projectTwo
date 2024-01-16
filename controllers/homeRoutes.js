@@ -6,6 +6,7 @@ router.get("/", async (req, res) => {
     try {
         res.render("homepage", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src
         });
     } catch (err) {
@@ -17,6 +18,7 @@ router.get('/login', (req, res) => {
     try {
         res.render("login", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src
         });
     } catch (err) {
@@ -28,6 +30,7 @@ router.get('/signup', (req, res) => {
     try {
         res.render("signup", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src
         });
     } catch (err) {
@@ -106,6 +109,7 @@ router.get("/info", async (req, res) => {
     try {
         res.render("infopage", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src
         });
     } catch (err) {
@@ -113,6 +117,9 @@ router.get("/info", async (req, res) => {
     }
 });
 
+router.get('/:error', async (req, res) => {
+    res.render('error')
+})
 module.exports = router;
 
 
