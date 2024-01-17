@@ -234,6 +234,7 @@ router.get("/createtour", async (req, res) => {
     try {
         res.render("createTour", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src,
         });
     } catch (err) {
@@ -244,6 +245,7 @@ router.get("/creatememos", async (req, res) => {
     try {
         res.render("createMemos", {
             logged_in: req.session.logged_in,
+            profile_id: req.session.profile_id,
             img_src: req.session.img_src,
         });
     } catch (err) {
