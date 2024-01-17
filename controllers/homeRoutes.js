@@ -52,7 +52,7 @@ router.get('/signup', (req, res) => {
 
 router.get("/dashboard", isLogged, async (req, res) => {
     try {
-        // req.session.user_id = 1;
+        req.session.user_id = 1;
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ["password"] },
             include: [
@@ -178,7 +178,7 @@ router.get("/tours", async (req, res) => {
         res.status(500).json(err);
     }
 });
-router.get("/memos", async (req, res) => {
+router.get("/memos", isLogged, async (req, res) => {
     try {
         const memosData = await Memos.findAll(
             {
