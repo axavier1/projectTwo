@@ -258,3 +258,7 @@ label {
 .img-list:hover{
   cursor: pointer;
 }
+
+svg:hover {
+  fill: #38a169;
+}

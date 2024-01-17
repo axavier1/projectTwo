@@ -4150,6 +4150,10 @@ label {
   cursor: pointer;
 }
 
+svg:hover {
+  fill: #38a169;
+}
+
 .selection\:bg-transparent *::-moz-selection {
   background-color: transparent;
 }
