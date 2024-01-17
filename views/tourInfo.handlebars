@@ -1,12 +1,50 @@
-<main class="" >
 
-
-<div role="status" class="m-7 space-y-8  md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
-        <img class=" mx-3 bg-amber-200 w-64 h-64 text-gray-200 dark:text-gray-600"  src="{{tour.img_src}}"/>  
+<div role="status" class="m-7 my-10 flex flex-col space-y-8  md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
+       
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class=" slider relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div id="1" class="slide">
+            <img src="/assets/images/tour-img/pic1.jpeg" class="" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div id="2" class=" slide">
+            <img src="/assets/images/tour-img/pic2.jpeg" class="" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div id="3" class="slide">
+            <img src="/assets/images/tour-img/pic3.jpeg" class="" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div id="4" class="slide">
+            <img src="/assets/images/tour-img/pic5.jpeg" class="" alt="...">
+        </div>
         
-    
+    </div>
+  
+    <!-- Slider controls -->
+    <button type="button" class=" btn-prev absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-50  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class=" btn-next absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+    {{!-- Tour text --}}
     <article class="w-full">
-        <section class=" text-2xl w-fit p-3 bg-gray-800  text-white rounded-full mb-4"><strong>{{tour.title}}</strong></section>
+        <section class=" text-2xl w-fit p-3 bg-gray-800  text-white rounded-full mt-6 mb-4"><strong>{{tour.title}}</strong></section>
     
         <section class=" text-xl w-fit p-3 bg-gray-300 rounded-full mb-4">{{tour.description}}</section>
         <section class=" text-lg w-fit p-3   mb-4">{{tour.text}}</section>
@@ -14,7 +52,7 @@
             Tour categories:
             {{#each tour.categories as |category|}}{{>badge}} {{/each}}
         </section>
-        <section class="  w-fit px-1  bg-gray-300 rounded-full mb-4">
+        <section class="  w-fit px-1   bg-gray-300 rounded-full mb-4">
             <div class="flex items-center gap-4">
             <span>Created by: </span>
                <a href="/profile/{{user.profile.id}}"> <img class="w-11 h-11 rounded-full" src="{{user.img_src}}" alt="user icon"></a>
@@ -37,29 +75,6 @@
     </article>
     {{!-- <span class="sr-only">Loading...</span> --}}
 </div>
-</main>
 
-{{!-- src="/assets/icons/traveler.png" --}}
-{{!-- 
-<div>
-  <div id="tooltip-jese" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-      Jese Leos
-      <div class="tooltip-arrow" data-popper-arrow></div>
-  </div>
-  <img data-tooltip-target="tooltip-jese" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Medium avatar">
-</div>
-<div>
-  <div id="tooltip-roberta" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-      Roberta Casas
-      <div class="tooltip-arrow" data-popper-arrow></div>
-  </div>
-  <img data-tooltip-target="tooltip-roberta" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-4.jpg" alt="Medium avatar">
-</div>
-<div>
-  <div id="tooltip-bonnie" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-      Bonnie Green
-      <div class="tooltip-arrow" data-popper-arrow></div>
-  </div>
-  <img data-tooltip-target="tooltip-bonnie" class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-3.jpg" alt="Medium avatar">
-</div>
- --}}
+{{!-- src="{{tour.img_src}}" --}}
+<script src="/js/tourInfo.js"></script>
