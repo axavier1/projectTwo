@@ -20,11 +20,11 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // age: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    // },
-
+    img_src: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: '/assets/icons/traveler.png'
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

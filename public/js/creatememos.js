@@ -1,13 +1,14 @@
-const tourFormhandler = async (event) => {
+const createMemoHandler = async (event) => {
     event.preventDefault();
-   
+    console.log('working')
   
     const title = document.querySelector("#title").value.trim();
     const description = document.querySelector("#description").value.trim();
+     
     if (title && description) {
-      const response = await fetch("/api/tours", {
+      const response = await fetch("/api/memos", {
         method: "POST",
-        body: JSON.stringify({ title, description}),
+        body: JSON.stringify({ title, description }),
         headers: { 'Content-Type': 'application/json' }
   
   
@@ -15,7 +16,7 @@ const tourFormhandler = async (event) => {
   
       if (response.ok) {
         console.log('new account')
-        document.location.replace("/tour");
+        document.location.replace("/memos");
   
       } else {
         alert(response.statusText);
@@ -25,5 +26,5 @@ const tourFormhandler = async (event) => {
   
   document
     .querySelector("#submit")
-    .addEventListener("click", memosFormhandler);
+    .addEventListener("click", createMemoHandler);
   
