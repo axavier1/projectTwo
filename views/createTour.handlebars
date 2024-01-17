@@ -8,15 +8,15 @@
         <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
             <h1 class="mb-8 text-3xl text-center">Create a Tour</h1>
             {{!-- <input id="image" type="file" accept="image/*"> --}}
-            <input id="title" "text" required class="block border border-grey-light w-full p-3 rounded mb-4" name="title"
-                placeholder="Title" />
+            <input id="title" "text" required class="block border border-grey-light w-full p-3 rounded mb-4"
+                name="title" placeholder="Title" />
 
             <select id="tour-category"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-3">
                 <option selected>Choose a category</option>
-               {{#each categories as |Category|}}
-               {{>categoryData}}
-               {{/each}}
+                {{#each categories as |Category|}}
+                {{>categoryData}}
+                {{/each}}
             </select>
 
             <input id="description" type="text" required class="block border border-grey-light w-full p-3 rounded mb-4"
@@ -26,6 +26,11 @@
                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-3"
                 placeholder="Write your thoughts here..."></textarea>
 
+            <input type="url" id="image-input">
+            <button id="b"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-5">
+                Upload Image Url</button>
+            <br>
 
             <button id="submit" type="submit"
                 class="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
@@ -33,8 +38,11 @@
         </div>
         </form>
 
+        <img src="" id="image">
+
 
     </div>
 </div>
+<script src="/js/image.js"></script>
 
 <script src="/js/createtour.js"></script>
