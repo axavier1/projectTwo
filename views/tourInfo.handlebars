@@ -3,7 +3,9 @@
        
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
-   {{#each tour.images as |image|}}{{>slideImg}}{{each}}
+    <div class=" slider relative  overflow-hidden rounded-lg h-96">
+        {{#each tour.images as |image|}}{{>slideImg}}{{/each}}
+    </div>
   
     <!-- Slider controls -->
     <button type="button" class=" btn-prev absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -37,7 +39,7 @@
         <section class="  w-fit px-1   bg-gray-300 rounded-full mb-4">
             <div class="flex items-center gap-4">
             <span>Created by: </span>
-               <a href="/profile/{{user.profile.id}}"> <img class="w-11 h-11 rounded-full" src="{{user.img_src}}" alt="user icon"></a>
+               <a href="/profile/{{user.profile.id}}"> <img class="w-11 h-11 bg-green-600 rounded-full" src="{{user.img_src}}" alt="user icon"></a>
                 <div class="font-medium dark:text-white">
                 <div>{{user.user_name}}</div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">Joined in {{format_time user.createdAt}}</div>
@@ -50,13 +52,10 @@
          </section>
         <section class=" text-lg w-fit p-3 bg-gray-300 rounded-full mb-4">
             Click to join tour:
-            <button id="add-user" class="mx-3 relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-lime-300 rounded-full">
+            <button id="{{tour.id}}" class="add-user mx-3 relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-lime-500 rounded-full">
                  <span class="font-medium text-white" >+</span>
             </button>
         </section>
     </article>
-    {{!-- <span class="sr-only">Loading...</span> --}}
 </div>
-
-{{!-- src="{{tour.img_src}}" --}}
 <script src="/js/tourInfo.js"></script>
