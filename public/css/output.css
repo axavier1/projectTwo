@@ -5568,6 +5568,10 @@ svg:hover {
     display: flex;
   }
 
+  .md\:h-96 {
+    height: 24rem;
+  }
+
   .md\:w-2\/5 {
     width: 40%;
   }
@@ -5917,7 +5921,7 @@ svg:hover {
 
   .dark\:text-gray-800 {
     --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity));
+    color: rgb(31 41 55 / var(--tw-text-opacity));
   }
 
   .dark\:text-green-400 {
