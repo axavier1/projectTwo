@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile, Icon } = require('../models');
+const { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile, Icon, Image } = require('../models');
 
 const userData = require('./userData.json');
 const tourData = require('./tourData.json');
@@ -11,7 +11,7 @@ const memoData = require('./memoData.json');
 const memCommentData = require('./memoComment.json');
 const profileData = require('./profileData.json');
 const iconData = require('./iconData.json');
-
+const imageData = require('./imageData.json');
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
     await Profile.bulkCreate(profileData, {
@@ -57,7 +57,11 @@ const seedDatabase = async () => {
     await TourComment.bulkCreate(tourCommentData, {
         individualHooks: true,
         returning: true
-    })
+    });
+    await Image.bulkCreate(imageData, {
+        individualHooks: true,
+        returning: true
+    });
 
     process.exit(0);
 };

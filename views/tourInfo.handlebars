@@ -3,25 +3,7 @@
        
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class=" slider relative h-56 overflow-hidden rounded-lg md:h-96">
-         <!-- Item 1 -->
-        <div id="1" class="slide">
-            <img src="/assets/images/tour-img/pic1.jpeg" class="" alt="...">
-        </div>
-        <!-- Item 2 -->
-        <div id="2" class=" slide">
-            <img src="/assets/images/tour-img/pic2.jpeg" class="" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div id="3" class="slide">
-            <img src="/assets/images/tour-img/pic3.jpeg" class="" alt="...">
-        </div>
-        <!-- Item 4 -->
-        <div id="4" class="slide">
-            <img src="/assets/images/tour-img/pic5.jpeg" class="" alt="...">
-        </div>
-        
-    </div>
+   {{#each tour.images as |image|}}{{>slideImg}}{{each}}
   
     <!-- Slider controls -->
     <button type="button" class=" btn-prev absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
