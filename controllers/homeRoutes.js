@@ -229,6 +229,29 @@ router.get("/tours/:id", async (req, res) => {
         res.status(500).json(error);
     }
 })
+
+router.get("/createtour", async (req, res) => {
+    try {
+        res.render("createTour", {
+            logged_in: req.session.logged_in,
+            img_src: req.session.img_src,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+router.get("/creatememos", async (req, res) => {
+    try {
+        res.render("createMemos", {
+            logged_in: req.session.logged_in,
+            img_src: req.session.img_src,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
 router.get("/:error", async (req, res) => {
     try {
         res.render("errorpage", {});
@@ -236,4 +259,5 @@ router.get("/:error", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 module.exports = router;
