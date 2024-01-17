@@ -4,6 +4,7 @@ const createTourHandler = async (event) => {
 
   const title = document.querySelector("#title").value.trim();
   const description = document.querySelector("#description").value.trim();
+  const text = document.querySelector("#text").value.trim();
   //   const fileInput = document.querySelector("#image");
   //   const formData = new FormData();
 
@@ -28,10 +29,10 @@ const createTourHandler = async (event) => {
   //   for (const value of formData.entries()) {
   //     console.log(value);
   //   }
-  if (title && description) {
+  if (title && description && text) {
     const response = await fetch("/api/tours", {
       method: "POST",
-      body: JSON.stringify({ title, description }),
+      body: JSON.stringify({ title, description, text }),
       headers: { "Content-Type": "application/json" },
     });
 
