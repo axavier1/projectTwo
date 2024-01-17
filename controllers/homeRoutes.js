@@ -178,7 +178,7 @@ router.get("/tours", async (req, res) => {
         res.status(500).json(err);
     }
 });
-router.get("/memos", async (req, res) => {
+router.get("/memos", isLogged, async (req, res) => {
     try {
         const memosData = await Memos.findAll(
             {
@@ -231,8 +231,11 @@ router.get("/tours/:id", async (req, res) => {
 })
 
 router.get("/createtour", async (req, res) => {
+    const categoryData = await Category.findAll();
+    const categories = categoryData.map((category) => category.get({ plain: true }));
     try {
         res.render("createTour", {
+            categories,
             logged_in: req.session.logged_in,
             profile_id: req.session.profile_id,
             img_src: req.session.img_src,

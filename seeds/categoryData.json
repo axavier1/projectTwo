@@ -1,11 +1,20 @@
 [
     {
-       "type": "Hiking"
+       "type": "Excursion tour"
       },
       {
-        "type": "Backpacking Tours"
+        "type": "Mountain skiing tour"
        },
        {
-        "type": "Camping"
+        "type": "Sport and extreme tour"
+       },
+       {
+        "type": "Culinary tour"
+       },
+       {
+        "type": "Cultural tour"
        }
+
+
+
 ]
