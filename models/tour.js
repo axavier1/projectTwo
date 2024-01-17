@@ -13,11 +13,20 @@ Tour.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    img_src: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: '/assets/images/tour-img/pic2.jpeg'
+    },
+    text: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     // image: {
     //   type: DataTypes.BLOB,

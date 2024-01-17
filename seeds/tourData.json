@@ -1,19 +1,22 @@
 [
     {
-      "title": "Cool Tour 1",
-      "description": "We will travel around the world",
+      "title": "Japan Kyoto to Tokyo Walking",
+      "description": "Ancient Trails, Sacred Temples & Bamboo Forests",
+      "text": "Join me at this enchanting journey through Japan combines stunning vigorous walks with timeless tradition. Beginning in the old imperial city of Kyoto and ending in modern Tokyo, our itinerary follows the Nakasendo, a network of ancient trade routes once used to travel from Kyoto via the provincial towns of the Kiso Valley to Tokyo. By way of temples, shrines, and hamlets, you'll take in ethereal landscapes of lush gardens, misty forests and possibly the bloom of cherry blossoms. Along the way, enjoy generous Japanese hospitality in a shukubo (temple lodging) and family-run inns, and the contrasts between old and new in this magical land.",
       "host_id": 1,
       "category_id": 1
     },
     {
-        "title": "Cool Tour 3",
-        "description": "We will travel around the world",
+        "title": "Grand Canyon Hiking",
+        "description": "Enjoy the opportunity to hike and explore a wide variety of trails",
+        "text": "This rugged and remote region, where bold plateaus and multi-hued cliffs run for distances that defy human perspective, offers some of the best hiking in the world. Expanding over 277 miles in length, averaging 10 miles in width and over 1 mile deep, it is understandable why this great chasm is one of the Seven Natural Wonders of the World.",
         "host_id": 2,
         "category_id": 2
       },
       {
-        "title": "Cool Tour 2",
-        "description": "We will travel around the world",
+        "title": "Mexico Baja Sea of Cortez Multi-Adventure",
+        "description": "Kayak, Snorkel & Camp on Isla Espiritu Santo",
+        "text": "Considered the jewel of the Sea of Cortez, Isla Espiritu Santo is an unspoiled island paradise, home only to an abundance of spectacular wildlife. Discover this UNESCO-protected idyll on our multi-sport adventure, with two half-days of kayaking through sparkling water rich with marine life along the island's beautiful coastline, plus time to snorkel, swim, hike and unwind. Camp evenings feature delicious meals and stargazing. Bookend the island adventure with time to enjoy the pristine beaches and world-class surf breaks in the Pacific beach town of Todos Santos. This trip showcases Baja at its very best!",
         "host_id": 3,
         "category_id": 3
       }
