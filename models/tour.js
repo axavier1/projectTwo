@@ -28,6 +28,10 @@ Tour.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    // image: {
+    //   type: DataTypes.BLOB,
+    //   allowNull: true
+    // },
     host_id: {
       type: DataTypes.INTEGER,
       references: {
