@@ -52,7 +52,6 @@ router.get('/signup', (req, res) => {
 
 router.get("/dashboard", isLogged, async (req, res) => {
     try {
-        req.session.user_id = 1;
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ["password"] },
             include: [
