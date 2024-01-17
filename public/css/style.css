@@ -272,7 +272,6 @@ label {
 
 .slide {
   width: 100%;
-  
   height: 450px;
   position: absolute;
   transition: all 0.5s;
@@ -280,5 +279,6 @@ label {
 .slide img {
   width: 100%;
   height: 100%;
+  
   object-fit: cover;
 }

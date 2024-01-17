@@ -15,7 +15,7 @@ const nextSlide = () => {
         curSlide++;
     }
 
-    console.log(`sliding`)
+    // console.log(curSlide)
     slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
     });
@@ -27,7 +27,7 @@ document.querySelector('.btn-next').addEventListener('click', nextSlide);
 
 const prevSlide = () => {
     (curSlide === 0) ? curSlide = maxSlide : curSlide--;
-
+    // console.log(curSlide);
     slides.forEach((slide, indx) => {
         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
