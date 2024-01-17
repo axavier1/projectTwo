@@ -40,12 +40,24 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const createTour = await Tour.create({ ...req.body, host_id: req.session.user_id });
-    console.log(createTour);
+    const createTour = await Tour.create({
+      title: req.body.title,
+      host_id: req.session.user_id,
+      description: req.body.description,
+      text: req.body.text,
+      img_src: req.body.imgSrcArr[0]
+    });
+    req.body.imgSrcArr.forEach(async element => {
+      await Image.create({
+        img_src: element,
+        tour_id: createTour.id
+      })
 
+    });
     res.json(createTour);
   } catch (error) {
-    res.status(400).json(error);
+    // console.error(error);
+    res.status(500).json(error);
   }
 });
 
