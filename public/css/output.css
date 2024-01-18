@@ -1604,6 +1604,14 @@ select {
   height: 100vh;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .max-h-\[calc\(100\%-64px\)\] {
   max-height: calc(100% - 64px);
 }
@@ -2767,6 +2775,11 @@ select {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+
+.bg-lime-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'https\:\/\/www\.wallpaperup\.com\/uploads\/wallpapers\/2013\/12\/10\/191175\/442a57082a73914f3a54b99ac8135938\.jpg\'\)\] {

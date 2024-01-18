@@ -8,6 +8,7 @@ const TourMembers = require('./TourMembers.js');
 const Category = require('./Category.js');
 const Profile = require('./Profile.js');
 const Icon = require('./Icon.js');
+const Image = require('./Image.js');
 
 Profile.hasOne(User, {
     foreignKey: 'profile_id'
@@ -57,6 +58,13 @@ TourComment.belongsTo(Tour, {
     foreignKey: 'tour_id'
 })
 
+Tour.hasMany(Image, {
+    foreignKey: 'tour_id'
+})
+
+Image.belongsTo(Tour, {
+    foreignKey: 'tour_id'
+})
 
 
-module.exports = { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile, Icon };
+module.exports = { User, Tour, TourComment, Memos, MemosComment, TourCategory, TourMembers, Category, Profile, Icon, Image };
