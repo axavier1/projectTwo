@@ -1,0 +1,62 @@
+[
+    {
+       "img_src": "/assets/images/tour-img/pic1.jpeg",
+       "tour_id": 1
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic2.jpeg",
+        "tour_id": 1
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic3.jpeg",
+        "tour_id": 1
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic4.jpeg",
+        "tour_id": 1
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic5.jpeg",
+        "tour_id": 1
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic6.jpeg",
+        "tour_id": 2
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic7.jpeg",
+        "tour_id": 2
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic8.jpeg",
+        "tour_id": 2
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic9.jpeg",
+        "tour_id": 2
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic10.jpeg",
+        "tour_id": 2
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic11.jpeg",
+        "tour_id": 3
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic12.jpeg",
+        "tour_id": 3
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic13.jpeg",
+        "tour_id": 3
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic14.jpeg",
+        "tour_id": 3
+    },
+    {
+        "img_src": "/assets/images/tour-img/pic15.jpeg",
+        "tour_id": 3
+    } 
+]

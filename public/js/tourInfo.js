@@ -34,3 +34,29 @@ const prevSlide = () => {
 }
 
 document.querySelector('.btn-prev').addEventListener('click', prevSlide);
+
+
+// function for click to sign to tour 
+
+const addMember = async (event) => {
+    event.preventDefault();
+    const id = document.querySelector('.add-user').getAttribute('id');
+    // console.log(id);
+    if (id) {
+        const response = await fetch('/api/members/', {
+            method: "POST",
+            body: JSON.stringify({ id }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        if (response.ok) {
+            // console.log('new account')
+            document.location.reload();
+
+        } else {
+            // document.location.reload();
+            alert(response.statusText);
+        }
+    }
+};
+
+document.querySelector('.add-user').addEventListener('click', addMember);
