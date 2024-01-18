@@ -1,22 +1,21 @@
-
 {{#if logged_in}}{{>left-sideBar}} {{/if}}
-<div id="main" class="flex  colums-2 flex-col text-lg">
+{{!-- <div id="main" class="flex  colums-2 flex-col text-lg">
     <section id="section-1" class="flex  colums-3 flex-row justify-between flex-wrap">
         <div id="img-holder" class="flex justify-around"><img id="img" class="mt-3" src="{{profile.img_src}}"></div>
         <div id="personal-data" class="flex colums-2 flex-col justify-between flex-wrap">
-                <p>
+            <p>
                 <strong> My name:</strong> {{profile.profile_name}}
-                </p>
-                <p>
-                   <strong>My Age:</strong>  {{profile.age}}
-                </p>
-                <p>
-                   <strong>Favorite Place: </strong>  {{profile.fav_place}}
-                </p>
-                
+            </p>
+            <p>
+                <strong>My Age:</strong> {{profile.age}}
+            </p>
+            <p>
+                <strong>Favorite Place: </strong> {{profile.fav_place}}
+            </p>
+
         </div>
         <div id="bio">
-            <header><strong>Brief BIO:</strong></header>
+            <header><strong>Brief Bio:</strong></header>
             <p id="bio-txt">{{profile.bio}}</p>
         </div>
     </section>
@@ -27,13 +26,65 @@
         </div>
         <div>
             <header><strong>My funny travel story:</strong></header>
-            <p id="story-text" >{{profile.story}}</p>
+            <p id="story-text">{{profile.story}}</p>
         </div>
     </section>
     {{!-- <section class="flex justify-center"> --}}
-    {{!-- <butto id="updateProf-btn" class="{{user.profile.id}}">Update</butto> --}}
-    {{!-- </section> --}}
+        {{!-- <butto id="updateProf-btn" class="{{user.profile.id}}">Update</butto> --}}
+        {{!-- </section> --}}
 
+    {{!--
+</div> --}}
+
+{{!--
+<script src="/js/Profile.js"></script> --}}
+
+<div class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+            <div class="col-span-4 sm:col-span-3">
+                <div class="bg-white shadow rounded-lg ml-10 p-6">
+                    <div class="flex flex-col items-center">
+                        <img src="{{profile.img_src}}" class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0">
+
+                        </img>
+                        <h1 class="text-xl font-bold">{{profile.profile_name}}</h1>
+                    </div>
+                    <hr class="my-6 border-t border-gray-300">
+                    <div class="flex flex-col">
+                        <span class="text-gray-700 uppercase font-bold tracking-wider mb-2"></span>
+                        <ul>
+                            <li class="mb-2"><strong>My Age:</strong> {{profile.age}}</li>
+                            <li class="mb-2"><strong>Favorite Place:</strong> {{profile.fav_place}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4 sm:col-span-9">
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h2 class="text-xl font-bold mb-4">About <span class="text-green-600">Me</span></h2>
+                    <p class="text-gray-700">
+                        {{profile.bio}}
+                    </p>
+                    <h2 class="text-xl font-bold mt-6 mb-4">My Travels</h2>
+                    <div class="mb-6">
+                        <div class="flex justify-between flex-wrap gap-2 w-full">
+                            <span class="text-gray-700 font-bold">Tips for Travel:</span>
+                        </div>
+                        <p class="mt-2">
+                            {{profile.tips}}
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between flex-wrap gap-2 w-full">
+                            <span class="text-gray-700 font-bold">Funny Travel Story:</span>
+                        </div>
+                        <p class="mt-2">
+                            {{profile.story}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-{{!-- <script src="/js/Profile.js"></script> --}}
