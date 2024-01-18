@@ -1,5 +1,5 @@
 const User = require("./User");
-const Tour = require('./Tour.js')
+const Tour = require('./tour.js')
 const Memos = require("./Memos");
 const MemosComment = require("./MemosComment");
 const TourComment = require("./TourComment.js");

@@ -1,10 +1,10 @@
 {{>left-sideBar}}
 
 <main id="main" class="flex coluns-2 flex-col">
-    <p id="{{profile_id}}" class="id">Choose your icon </p>
-    <div id="list" class="flex  justify-around flex-wrap">
+    <h1 id="{{profile_id}}" class="id text-center">Choose your icon </h1>
+    <div id="list" class="flex justify-around flex-wrap">
     {{#each icons as |icon|}}
-    <img id="{{icon.id}}" class="img-list" src="/assets/icons/{{icon.name}}">
+    <img id="{{icon.id}}" class="img-list box" src="/assets/icons/{{icon.name}}">
     {{/each}}
     </div>
 </main>
