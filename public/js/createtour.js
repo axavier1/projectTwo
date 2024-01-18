@@ -7,7 +7,7 @@ const createTourHandler = async (event) => {
   const category_id = document.querySelector("#tour-category").value;
 
   if (document.getElementById('1')) {
-    console.log(`working`)
+    // console.log(`working`)
     const imgSrcArr = []
     const imgArr = document.querySelectorAll('.img-src');
     imgArr.forEach((imgEl) => imgSrcArr.push(imgEl.getAttribute('src')));
