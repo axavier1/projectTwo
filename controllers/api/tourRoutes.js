@@ -40,6 +40,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    // console.log(req.body)
     const createTour = await Tour.create({
       title: req.body.title,
       host_id: req.session.user_id,
@@ -51,12 +52,16 @@ router.post("/", async (req, res) => {
       await Image.create({
         img_src: element,
         tour_id: createTour.id
-      })
-
+      });
     });
-    res.json(createTour);
+    const createCategory = await TourCategory.create({
+      tour_id: createTour.id,
+      category_id: req.body.category_id
+    });
+    // console.log(createTour);
+    res.json(createCategory);
   } catch (error) {
-    // console.error(error);
+    console.error(error);
     res.status(500).json(error);
   }
 });
@@ -79,5 +84,18 @@ router.delete('/:id', isLoged, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+// router.post('/cat/', async (req, res) => {
+//   try {
+//     const creatCategory = await TourCategory.create({
+//       ...req.body
+//     });
+//     res.json(creatCategory);
+//   } catch (error) {
+//     res.json(error)
+//   }
+
+// })
 
 module.exports = router;

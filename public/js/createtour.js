@@ -4,6 +4,7 @@ const createTourHandler = async (event) => {
   const title = document.querySelector("#title").value.trim();
   const description = document.querySelector("#description").value.trim();
   const text = document.querySelector("#text").value.trim();
+  const category_id = document.querySelector("#tour-category").value;
 
   if (document.getElementById('1')) {
     console.log(`working`)
@@ -16,7 +17,7 @@ const createTourHandler = async (event) => {
       console.log(imgSrcArr);
       const response = await fetch("/api/tours", {
         method: "POST",
-        body: JSON.stringify({ title, description, text, imgSrcArr }),
+        body: JSON.stringify({ title, description, text, imgSrcArr, category_id }),
         headers: { "Content-Type": "application/json" },
       });
 
