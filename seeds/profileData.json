@@ -1,26 +1,26 @@
 [
     {
-        "profile_name": "My Name",
+        "profile_name": "Dylan Kay",
+        "age": 35,
+        "fav_place": "Philadelphia",
+        "bio": "Some bio here",
+        "tips": "Pack a reusable water bottle. Make photocopies of your passport to give to family at home, and keep one set in your luggage (or email a copy of it to yourself).",
+        "story": "And while I was taught since birth to avoid hanging out alone in rooms with strange old men, I was captivated by his stories. He rattled on and on about what it was like to grow up in Liverpool during such an important time (yes, he grew up with the Beatles rise to fame), and chatted about his favourite spots in the city."
+    },
+    {
+        "profile_name": "Culann Gwenddoleu",
         "age": 30,
         "fav_place": "Philadelphia",
         "bio": "Some bio here",
-        "tips": "Some Tips for travel here",
-        "story": "Some story about travel"
+        "tips": "Always wear sunscreen.If you forgot something, as the hotel front desk. Most likely they will have a complementary replacement on hand.You dont need a bunch of dressy clothes. If you must have some, ONE nice outfit will be enough. Bring comfortable, worn in shoes. Dont try to break in your new shoes on the trip and end up with blisters upon blisters.",
+        "story": "And while I was taught since birth to avoid hanging out alone in rooms with strange old men, I was captivated by his stories. He rattled on and on about what it was like to grow up in Liverpool during such an important time (yes, he grew up with the Beatles rise to fame), and chatted about his favourite spots in the city."
     },
     {
-        "profile_name": "My Name2",
-        "age": 302,
-        "fav_place": "Philadelphia2",
-        "bio": "Some bio here2",
-        "tips": "Some Tips for travel here2",
-        "story": "Some story about travel2"
-    },
-    {
-        "profile_name": null,
-        "age": null,
-        "fav_place": null,
+        "profile_name": "Derdriu Guendolen",
+        "age": 28,
+        "fav_place": "Philadelphia",
         "bio": null,
-        "tips": null,
-        "story": null
+        "tips": "Bring snacks! Dont sleep in while traveling. There is so much to do and so much to see. Never leave valuables in the car, even if theyre hidden from view.Always bring a hat.",
+        "story": "And while I was taught since birth to avoid hanging out alone in rooms with strange old men, I was captivated by his stories. He rattled on and on about what it was like to grow up in Liverpool during such an important time (yes, he grew up with the Beatles rise to fame), and chatted about his favourite spots in the city."
     }
 ]
