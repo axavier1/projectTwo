@@ -9,13 +9,15 @@
       "user_name": "Lernantino",
       "email": "lernantino@gmail.com",
       "password": "password12345",
-      "profile_id": 2
+      "profile_id": 2,
+      "img_src": "/assets/icons/svg.png"
     },
     {
       "user_name": "Amiko",
       "email": "amiko2k20@aol.com",
       "password": "password12345",
-      "profile_id": 3
+      "profile_id": 3,
+      "img_src": "/assets/icons/sunrise.png"
     }
-  ]
+]
   
